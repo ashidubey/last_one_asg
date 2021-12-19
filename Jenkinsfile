@@ -51,7 +51,6 @@ stage(‘package’)
       stage("Deploy to k8s")
       {
           steps{
-              kubernetesDeploy configs: '**/deploy.yml', kubeConfig: [path: ''], kubeconfigId: 'kubeconfig', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
           }
       }
     }
